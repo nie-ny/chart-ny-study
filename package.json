@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/nie-ny/chart-ny/issues"
   },
-  "homepage": "https://github.com/nie-ny/chart-ny#readme",
+  "homepage": "https://nie-ny.github.io/github-actions-demo",
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.16.0",
