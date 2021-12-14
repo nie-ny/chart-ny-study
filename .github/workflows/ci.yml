@@ -20,4 +20,4 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
-          folder: build # 操作应部署的文件夹
+          folder: builda # 操作应部署的文件夹
