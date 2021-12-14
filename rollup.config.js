@@ -4,15 +4,15 @@ export default {
   input: 'src/index.js', // 打包入口
   output: [
     {
-      file: 'dist/cjs/index.js', // 对于 Nodejs，打包成 commonjs
+      file: 'build/cjs/index.js', // 对于 Nodejs，打包成 commonjs
       format: 'cjs'
     },
     {
-      file: 'dist/es/index.js', // 对于浏览器，打包成 ES module
+      file: 'build/es/index.js', // 对于浏览器，打包成 ES module
       format: 'es'
     },
     {
-      file: 'dist/umd/index.min.js',
+      file: 'build/umd/index.min.js',
       name: 'sp',
       format: 'umd' // 对于 Nodejs 和浏览器，打包成混合模式
     }
