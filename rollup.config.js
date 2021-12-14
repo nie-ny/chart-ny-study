@@ -20,6 +20,9 @@ export default {
   ],
   plugins: [
     babel(), // 使用 babel 插件
-    html()
+    html({
+      fileName: 'index.html',
+      publicPath: './'
+    })
   ]
 }

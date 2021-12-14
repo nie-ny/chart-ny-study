@@ -1,4 +1,4 @@
-import { createRenderer } from './renderer'
+import { createRenderer } from './renderer/index'
 
 // 创建渲染器
 const renderer = createRenderer(600, 400)
@@ -14,7 +14,7 @@ renderer.rect({
 
 // 坐标变换
 renderer.save()
-renderer.scale(2, 2)
+renderer.scale(5, 2)
 renderer.rect({
   x: 10,
   y: 10,
@@ -22,3 +22,5 @@ renderer.rect({
   height: 50
 })
 renderer.restore()
+
+document.body.appendChild(renderer.node())
