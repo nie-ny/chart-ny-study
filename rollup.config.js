@@ -1,6 +1,6 @@
-import babel from 'rollup-plugin-babel'
+import { babel } from '@rollup/plugin-babel'
 // 打包过程能正确加载文件
-import resolve from 'rollup-plugin-node-resolve'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 import html from '@rollup/plugin-html'
 // 开发服务器
 import serve from 'rollup-plugin-serve'
@@ -27,8 +27,8 @@ export default {
     }
   ],
   plugins: [
-    resolve(),
-    babel(), // 使用 babel 插件
+    nodeResolve(),
+    babel({ babelHelpers: 'bundled' }), // 使用 babel 插件
     html({
       fileName: 'index.html',
       publicPath: './',
