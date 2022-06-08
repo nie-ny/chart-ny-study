@@ -4,9 +4,10 @@
   "description": "",
   "main": "es/index.js",
   "scripts": {
-    "build": "rimraf -rf ./build && rollup --config",
+    "dev": "rollup -c -w",
+    "build": "rimraf -rf ./build && cross-env NODE_ENV=production rollup --config",
     "lint": "eslint --fix",
-    "jest": "jest",
+    "ci": "run-s lint build",
     "prepare": "husky install"
   },
   "repository": {
@@ -28,14 +29,19 @@
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@rollup/plugin-html": "^0.2.4",
+    "cross-env": "^7.0.3",
     "eslint": "^8.4.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
     "husky": "^7.0.0",
     "lint-staged": "^12.1.2",
+    "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "rollup": "^2.61.1",
-    "rollup-plugin-babel": "^4.4.0"
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-serve": "^1.1.0"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"

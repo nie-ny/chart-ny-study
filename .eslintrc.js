@@ -12,7 +12,6 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-    // 这里添加一行规则把这条规则隐藏
     'import/prefer-default-export': 0,
     'comma-dangle': [2, 'never'],
     semi: [2, 'never'],
@@ -26,6 +25,7 @@ module.exports = {
     'no-loop-func': 0,
     'no-nested-ternary': 0,
     'object-curly-newline': 0,
-    'import/no-unresolved': 0
+    'import/no-unresolved': 0,
+    'operator-linebreak': 0
   }
 }

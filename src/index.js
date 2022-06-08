@@ -12,8 +12,9 @@ renderer.rect({
   fill: 'red'
 })
 
-// 坐标变换
+// 挂载 图形
 renderer.save()
+
 renderer.scale(5, 2)
 renderer.rect({
   x: 10,
