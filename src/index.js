@@ -12,16 +12,24 @@ renderer.rect({
   fill: 'red'
 })
 
-// 挂载 图形
 renderer.save()
 
-renderer.scale(5, 2)
 renderer.rect({
-  x: 10,
+  x: 100,
   y: 10,
   width: 50,
   height: 50
 })
+
 renderer.restore()
 
-document.body.appendChild(renderer.node())
+renderer.rect({
+  x: 10,
+  y: 100,
+  width: 50,
+  height: 50
+})
+
+renderer.save()
+
+document.body.appendChild(renderer.svgDom())

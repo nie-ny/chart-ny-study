@@ -1,11 +1,21 @@
 import { applyAttributes, createSVGElement, mount } from './utils'
 
+/**
+ * 创建元素 挂在到 父级 g 元素上
+ * @param {*} type 元素类型
+ * @param {*} context SVG 上下文
+ * @param {*} attributes 元素属性
+ * @returns
+ */
 export function shape(type, context, attributes) {
-  const { group } = context // 挂载元素
-  const el = createSVGElement(type) // 创建对应的元素
-  applyAttributes(el, attributes) // 设置属性
-
-  mount(group, el) // 挂载
+  // 获取上下文 挂载的 g元素
+  const { group } = context
+  // 创建对应的元素
+  const el = createSVGElement(type)
+  // 设置属性
+  applyAttributes(el, attributes)
+  // 挂载到 g元素
+  mount(group, el)
   return el // 返回该元素
 }
 
@@ -30,6 +40,7 @@ export function rect(context, attributes) {
   })
 }
 
+// 圆
 export function circle(context, attributes) {
   return shape('circle', context, attributes)
 }

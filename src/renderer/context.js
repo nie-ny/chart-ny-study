@@ -8,12 +8,13 @@ export function createContext(width, height) {
   svg.setAttribute('viewBox', `0 0 ${width} ${height}`)
 
   // 创建挂载 g 节点，并且把该 g 节点挂载到 svg 节点上
+  // 后续绘图都在 这个g节点上
   const g = createSVGElement('g')
+  // 在SVG上下文 挂载 g元素
   mount(svg, g)
 
-  // 返回画布节点和挂载节点
   return {
-    svg,
+    svgDom: svg,
     group: g
   }
 }
