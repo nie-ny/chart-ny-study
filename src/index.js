@@ -1,4 +1,5 @@
 import { createRenderer } from './renderer/index'
+import { createLinear } from './scale/index'
 
 // 创建渲染器
 const renderer = createRenderer(600, 400)
@@ -12,24 +13,8 @@ renderer.rect({
   fill: 'red'
 })
 
-renderer.save()
-
-renderer.rect({
-  x: 100,
-  y: 10,
-  width: 50,
-  height: 50
-})
-
-renderer.restore()
-
-renderer.rect({
-  x: 10,
-  y: 100,
-  width: 50,
-  height: 50
-})
-
-renderer.save()
-
 document.body.appendChild(renderer.svgDom())
+
+const tem = createLinear({ domain: [0, 10], range: [50, 100] })
+
+console.log('🚀 ~ file: index.js ~ line 40 ~ tem', tem.ticks(6))

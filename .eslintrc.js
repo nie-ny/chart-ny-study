@@ -26,6 +26,8 @@ module.exports = {
     'no-nested-ternary': 0,
     'object-curly-newline': 0,
     'import/no-unresolved': 0,
-    'operator-linebreak': 0
+    'operator-linebreak': 0,
+    'max-len': 0,
+    'semi-style': 0
   }
 }

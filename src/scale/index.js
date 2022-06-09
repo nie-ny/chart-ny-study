@@ -1,0 +1,7 @@
+export { createLinear, interpolateNumber, interolateColor } from './linear'
+export { createTime } from './time'
+export { createOrdinal } from './ordinal'
+export { createBand } from './band'
+export { createPoint } from './point'
+export { createThreshold } from './threshold'
+export { createQuantize } from './quantize'
