@@ -10,3 +10,16 @@ export function curry(fn) {
     return curried.bind(null, ...newArgs)
   }
 }
+
+export function identity(x) {
+  return x
+}
+/**
+ * 组合函数
+ * @param {*} fn
+ * @param  {...any} rest
+ * @returns
+ */
+export function compose(...fns) {
+  return fns.reduce((total, cur) => (x) => cur(total(x)), identity)
+}

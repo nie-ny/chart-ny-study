@@ -62,7 +62,7 @@ export function transpose() {
 }
 
 /**
- * 极坐标
+ * 极坐标变换
  */
 export function polar() {
   // 这里我们把点的第一个维度作为 theta
