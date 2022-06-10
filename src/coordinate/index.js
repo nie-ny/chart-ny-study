@@ -1,4 +1,4 @@
 export { createCoordinate } from './coordinate'
 export { cartesian } from './cartesian'
 export { polar } from './polar'
-export { transpose } from './transforms'
+export { transpose } from './transpose'

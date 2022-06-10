@@ -1,5 +1,10 @@
 import { compose } from './utils'
 
+/**
+ * 坐标系 变换
+ * @param {*} param0
+ * @returns
+ */
 export function createCoordinate({ x, y, width, height, transforms: coordinates = [] }) {
   // coordinates 是坐标系变换函数
   // 它们是已经接受了 transformOptions 的柯里化函数
