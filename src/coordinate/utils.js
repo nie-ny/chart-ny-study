@@ -14,6 +14,7 @@ export function curry(fn) {
 export function identity(x) {
   return x
 }
+
 /**
  * 组合函数
  * @param {*} fn
