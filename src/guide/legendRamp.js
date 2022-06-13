@@ -1,5 +1,5 @@
+import { identity } from '../utils'
 import { createLinear } from '../scale'
-import { identity } from './utils'
 import { ticksBottom } from './ticks'
 
 export function legendRamp(

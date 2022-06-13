@@ -1,4 +1,4 @@
-import { dist } from './utils'
+import { dist } from '../utils'
 
 // TODO 没太明白
 

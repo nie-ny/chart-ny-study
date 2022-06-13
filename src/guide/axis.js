@@ -1,4 +1,4 @@
-import { identity } from './utils'
+import { identity } from '../utils'
 
 // components 不同坐标系对应的绘制组件
 // labelOf 获取标签绘制需要的刻度

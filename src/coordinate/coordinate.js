@@ -1,4 +1,4 @@
-import { compose } from './utils'
+import { compose } from '../utils'
 
 /**
  * 坐标系 变换

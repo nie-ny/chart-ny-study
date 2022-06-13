@@ -1,4 +1,4 @@
-import { identity } from './utils'
+import { identity } from '../utils'
 
 // marginLeft 色块和文字的距离
 export function legendSwatches(

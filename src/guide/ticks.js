@@ -1,4 +1,4 @@
-import { degree, rotationOf, unique } from './utils'
+import { degree, unique, angle, sub } from '../utils'
 
 /**
  * 底部绘制 刻度 文本
@@ -92,4 +92,16 @@ export function ticksCircular(renderer, ticks, { tickLength, fontSize, center })
     renderer.restore()
     renderer.restore()
   }
+}
+
+/**
+ *
+ * @param {*} center
+ * @param {*} param1
+ * @returns
+ */
+function rotationOf(center, [x, y]) {
+  const tickRotation = angle(sub([x, y], center))
+  const textRotation = tickRotation < 0 ? Math.PI : 0
+  return { tickRotation: tickRotation - Math.PI / 2, textRotation }
 }

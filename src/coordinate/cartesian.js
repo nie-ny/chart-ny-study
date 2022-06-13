@@ -1,4 +1,4 @@
-import { curry } from './utils'
+import { curry } from '../utils'
 import { scale, translate } from './transforms'
 
 /**
