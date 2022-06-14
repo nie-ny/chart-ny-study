@@ -1,5 +1,5 @@
 /**
- * 几何图形
+ * 几何图形 通道检测
  * @param {*} channels
  * @param {*} render
  * @returns

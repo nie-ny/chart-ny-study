@@ -1,5 +1,9 @@
 import { group } from '../utils'
 
+/**
+ *
+ * @returns
+ */
 export function createSymmetryY() {
   return ({ index, values }) => {
     const { x: X } = values

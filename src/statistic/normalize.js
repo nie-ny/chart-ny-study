@@ -1,5 +1,9 @@
 import { group } from '../utils'
 
+/**
+ * 归一化
+ * @returns
+ */
 export function createNormalizeY() {
   return ({ index, values }) => {
     const { x: X } = values

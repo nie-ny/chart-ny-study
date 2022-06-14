@@ -1,5 +1,9 @@
 import { group } from '../utils'
 
+/**
+ * 叠堆
+ * @returns
+ */
 export function createStackY() {
   return ({ index, values }) => {
     const { x: X, y: Y } = values

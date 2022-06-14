@@ -9,6 +9,10 @@ export function angle([x, y]) {
   return theta
 }
 
+export function equal([x0, y0], [x1, y1]) {
+  return closeTo(x0, x1) && closeTo(y0, y1)
+}
+
 /**
  *
  * @param {*} radian
@@ -16,6 +20,14 @@ export function angle([x, y]) {
  */
 export function degree(radian) {
   return (radian * 180) / Math.PI
+}
+
+// 计算两个向量之间的夹角
+export function angleBetween(v0, v1) {
+  const a0 = angle(v0)
+  const a1 = angle(v1)
+  if (a0 < a1) return a1 - a0
+  return Math.PI * 2 - (a0 - a1)
 }
 
 /**
