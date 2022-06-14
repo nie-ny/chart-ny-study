@@ -73,11 +73,7 @@ export function create(options) {
   if (type === 'polar') return polar(rest)
 
   // scales
-  if (type === 'band') {
-    console.log('🚀 ~ file: create.js ~ line 77 ~ create ~ rest', rest)
-    return createBand(rest)
-  }
-
+  if (type === 'band') return createBand(rest)
   if (type === 'linear') return createScaleQ(createLinear, rest)
   if (type === 'time') return createScaleQ(createTime, rest)
   // if (type === 'log') return createScaleQ(createLog, rest)
