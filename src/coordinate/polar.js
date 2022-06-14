@@ -9,7 +9,7 @@ import { curry } from '../utils'
  */
 function coordinate(transformOptions, canvasOptions) {
   const { width, height } = canvasOptions
-  const { innerRadius, outerRadius, startAngle, endAngle } = transformOptions
+  const { innerRadius = 0, outerRadius = 1, startAngle = 0, endAngle = Math.PI * 2 } = transformOptions
 
   // 保证最后经过 cartesian 变化之后是一个圆形
   // 需要根据画布宽高去调整
