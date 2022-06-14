@@ -1,4 +1,4 @@
-export { createLinear, interpolateNumber, interolateColor } from './linear'
+export { createLinear, interpolateNumber, interpolateColor } from './linear'
 export { createTime } from './time'
 export { createOrdinal } from './ordinal'
 export { createBand } from './band'

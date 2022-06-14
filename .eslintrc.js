@@ -31,6 +31,7 @@ module.exports = {
     'semi-style': 0,
     'implicit-arrow-linebreak': 0,
     'function-paren-newline': 0,
-    'no-bitwise': 0
+    'no-bitwise': 0,
+    indent: 0
   }
 }

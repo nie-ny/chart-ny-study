@@ -17,3 +17,30 @@ export function group(array, key = (d) => d) {
   }
   return keyGroups
 }
+
+/**
+ * 获取数组 下标组
+ * @param {*} array
+ * @returns
+ */
+export function indexOf(array) {
+  return array.map((_, i) => i)
+}
+
+/**
+ * 获取数组第一个值
+ * @param {*} array
+ * @returns
+ */
+export function firstOf(array) {
+  return array[0]
+}
+
+/**
+ * 获取数组最后一个值
+ * @param {*} array
+ * @returns
+ */
+export function lastOf(array) {
+  return array[array.length - 1]
+}

@@ -20,13 +20,16 @@ export function createViews(
   const { width = 640, height = 480, x = 0, y = 0 } = root
   const rootView = { width, height, x, y }
 
-  // 根据节点索引视图
+  // 根据节点 索引 视图
   const nodeView = new Map([[root, rootView]])
 
   for (const node of nodes) {
     const view = nodeView.get(node)
     const { children = [], type } = node
+
+    // 获取 类型参数 判断 使用什么视图
     const computeChildrenViews = computes[type]
+
     if (computeChildrenViews) {
       // 计算孩子节点的区域大小
       const childrenViews = computeChildrenViews(view, node)
@@ -48,7 +51,12 @@ export function createViews(
 
   // 将计算好的视图根据区域去分组
   const key = (d) => `${d.x}-${d.y}-${d.width}-${d.height}`
+
+  // .entries() 转换为 MapIterator 迭代器 [key,value]
+
   const keyViews = group(Array.from(nodeView.entries()), ([, view]) => key(view))
+
+  // .values() 转换为 只有Map value值 的迭代器
   return Array.from(keyViews.values()).map((views) => {
     const view = views[0][1]
     const nodes = views.map((d) => d[0])
