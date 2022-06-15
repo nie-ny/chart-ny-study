@@ -32,6 +32,7 @@ module.exports = {
     'implicit-arrow-linebreak': 0,
     'function-paren-newline': 0,
     'no-bitwise': 0,
-    indent: 0
+    indent: 0,
+    'import/newline-after-import': 0
   }
 }

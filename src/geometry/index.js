@@ -1,6 +1,6 @@
 export { createChannel, createChannels } from './channel'
 export { interval } from './interval'
-// export { cell } from './cell'
+export { cell } from './cell'
 export { rect } from './rect'
 export { line } from './line'
 export { point } from './point'

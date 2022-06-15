@@ -4,7 +4,7 @@ import {
   area,
   text,
   link,
-  // cell,
+  cell,
   rect,
   point
   // path
@@ -46,7 +46,7 @@ export function create(options) {
   if (type === 'area') return area
   if (type === 'text') return text
   if (type === 'link') return link
-  // if (type === 'cell') return cell
+  if (type === 'cell') return cell
   if (type === 'rect') return rect
   if (type === 'point') return point
   // if (type === 'path') return path
