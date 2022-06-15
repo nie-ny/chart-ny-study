@@ -88,7 +88,7 @@ export function area(renderer, coordinate, { X1, Y1, X2, Y2, I: I0, ...styles })
 }
 
 /**
- *
+ * 绘制图形
  * @param {*} renderer
  * @param {*} coordinate
  * @param {*} param2
